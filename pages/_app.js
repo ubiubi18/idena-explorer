@@ -135,7 +135,7 @@ export default function MyApp({Component, pageProps}) {
                 </a>
 
                 <a
-                  href="https://discord.gg/8BusRj7"
+                  href="https://discord.gg/idena-community-634481767352369162"
                   target="blank"
                   className="social_list__item"
                 >

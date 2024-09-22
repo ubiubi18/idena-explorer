@@ -57,9 +57,9 @@ $padding-buttons-y-sm: 8px;
 $rect_aspect_ratio: 'min-aspect-ratio: 6/10';
 $square_aspect_ratio: 'min-aspect-ratio: 3/4';
 // for retina and other HDPI
-$HDPI: 'only screen and (-webkit-min-device-pixel-ratio: 1.3),
+$HDPI: only screen and (-webkit-min-device-pixel-ratio: 1.3),
 only screen and (-o-min-device-pixel-ratio: 13/10),
-only screen and (min-resolution: 120dpi)';
+only screen and (min-resolution: 120dpi);
 
 $max_phones--tiny: 'max-width: 320px';
 $min_phones--tiny: 'min-width: 321px';

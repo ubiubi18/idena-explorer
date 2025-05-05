@@ -55,9 +55,9 @@ export default function TopAddress({visible}) {
                 <tr 
                 key={item.address}
                  style={{
-+                    // if this identity came back as suspended/zombie, colour its text
-+                    color: statusColors[item.state] || 'inherit'
-+                  }}
+                    // if this identity came back as suspended/zombie, colour its text
+                    color: statusColors[item.state] || 'inherit'
+                  }}
                 >
                   <td>
                     <div className="user-pic">

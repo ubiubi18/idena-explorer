@@ -5,7 +5,7 @@ import {getMiningRewards} from '../../../shared/api'
 import {dnaFmt, epochFmt, precise2} from '../../../shared/utils/utils'
 import {SkeletonRows} from '../../../shared/components/skeleton'
 
-const LIMIT = 30
+const LIMIT = 50
 
 export default function Mining({address, visible}) {
   const fetchRewards = (_, address, continuationToken = null) =>

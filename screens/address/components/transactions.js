@@ -10,7 +10,7 @@ import {getTransactions, getTransactionsCount} from '../../../shared/api'
 import {SkeletonRows} from '../../../shared/components/skeleton'
 import {WarningTooltip} from '../../../shared/components/tooltip'
 
-const LIMIT = 30
+const LIMIT = 50
 
 export default function Transactions({address, visible}) {
   const fetchTransactions = (_, address, continuationToken = null) =>

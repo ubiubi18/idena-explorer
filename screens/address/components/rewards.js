@@ -10,7 +10,7 @@ import {
 } from '../../../shared/utils/utils'
 import {SkeletonRows} from '../../../shared/components/skeleton'
 
-const LIMIT = 30
+const LIMIT = 50
 
 export default function Rewards({address, visible}) {
   const fetchRewards = (_, address, continuationToken = null) =>

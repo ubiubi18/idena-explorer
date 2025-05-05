@@ -9,7 +9,7 @@ import {
 import {getPenalties, getPenaltiesCount} from '../../../shared/api'
 import {SkeletonRows} from '../../../shared/components/skeleton'
 
-const LIMIT = 30
+const LIMIT = 50
 
 export default function Penalties({address, visible}) {
   const fetchPenalties = (_, address, continuationToken = null) =>

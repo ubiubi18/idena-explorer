@@ -48,7 +48,16 @@ export default function TopAddress({visible}) {
             (page) =>
               page &&
               page.map((item) => (
-                <tr key={item.address}>
+                <tr 
+                key={item.address}
+                 style={ 
+                   item.state === 'suspended'
+                   ? { color: '#96999e' }
+                   : item.state === 'zombie'
+                   ? { color: '#d2d4d9' }
+                   : undefined
+                  }
+                >
                   <td>
                     <div className="user-pic">
                       <img

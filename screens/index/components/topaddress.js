@@ -10,10 +10,10 @@ import {SkeletonRows} from '../../../shared/components/skeleton'
 import {getBalances} from '../../../shared/api'
 import {precise2, dnaFmt} from '../../../shared/utils/utils'
 
-const LIMIT = 30
+const LIMIT = 50
 
 export default function TopAddress({visible}) {
-  const [sortBy, setSortBy] = useState('balance')
+  const [sortBy, setSortBy] = useState('stake')
 
   const fetchBalances = (_, continuationToken = null) =>
     getBalances(sortBy, LIMIT, continuationToken)
@@ -187,14 +187,14 @@ const SortByMenu = ({value, onChangeValue}) => (
       <DropdownMenuContent sideOffset={5} align="end">
         <DropdownMenuLabel>Sort by</DropdownMenuLabel>
         <DropdownMenuRadioGroup value={value} onValueChange={onChangeValue}>
-          <DropdownMenuRadioItem value="balance">
+          <DropdownMenuRadioItem value="stake">
             Balance
             <DropdownMenuItemIndicator>
               <CheckIcon />
             </DropdownMenuItemIndicator>
           </DropdownMenuRadioItem>
           <DropdownMenuSeparator />
-          <DropdownMenuRadioItem value="stake">
+          <DropdownMenuRadioItem value="balance">
             Stake
             <DropdownMenuItemIndicator>
               <CheckIcon />

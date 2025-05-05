@@ -18,7 +18,14 @@ const LIMIT = 50
 
 export default function TopAddress({visible}) {
   const [sortBy, setSortBy] = useState('stake')
-
+// map identity states to your chosen colours
+  const statusColors = {
+    verified: '#578fff',
+    newbie:   '#ff6666',
+    human:    '#27d980',
+    suspended:'#96999e',
+    zombie:   '#d2d4d9',
+  }
   const fetchBalances = (_, continuationToken = null) =>
     getBalances(sortBy, LIMIT, continuationToken)
 
@@ -56,8 +63,7 @@ export default function TopAddress({visible}) {
                 key={item.address}
                  style={{
                     // if this identity came back as suspended/zombie, colour its text
-                    color: statusColors[item.state] || 'inherit'
-                  }}
+                    color: statusColors[item.state] || 'inherit'}}
                 >
                   <td>
                     <div className="user-pic">

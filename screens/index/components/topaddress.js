@@ -9,7 +9,11 @@ import {CheckIcon, DotsVerticalIcon} from '@radix-ui/react-icons'
 import {SkeletonRows} from '../../../shared/components/skeleton'
 import {getBalances} from '../../../shared/api'
 import {precise2, dnaFmt} from '../../../shared/utils/utils'
-
+// add the same colours you use elsewhere
+const statusColors = {
+  suspended: '#96999e',
+  zombie:    '#d2d4d9',
+}
 const LIMIT = 50
 
 export default function TopAddress({visible}) {
@@ -50,13 +54,10 @@ export default function TopAddress({visible}) {
               page.map((item) => (
                 <tr 
                 key={item.address}
-                 style={ 
-                   item.state === 'suspended'
-                   ? { color: '#96999e' }
-                   : item.state === 'zombie'
-                   ? { color: '#d2d4d9' }
-                   : undefined
-                  }
+                 style={{
++                    // if this identity came back as suspended/zombie, colour its text
++                    color: statusColors[item.state] || 'inherit'
++                  }}
                 >
                   <td>
                     <div className="user-pic">

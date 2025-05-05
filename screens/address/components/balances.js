@@ -4,7 +4,7 @@ import {dateTimeFmt, precise2} from '../../../shared/utils/utils'
 import {getBalanceChanges} from '../../../shared/api'
 import {SkeletonRows} from '../../../shared/components/skeleton'
 
-const LIMIT = 30
+const LIMIT = 50
 
 export default function BalanceHistory({address, visible}) {
   const fetchBalances = (_, continuationToken = null) =>
